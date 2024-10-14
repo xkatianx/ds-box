@@ -15,9 +15,7 @@ describe("Stack", () => {
   });
 
   test("should handle push and pop operations correctly", () => {
-    stack.push(1);
-    stack.push(2);
-    stack.push(3);
+    stack.push(1).push(2).push(3);
 
     expect(stack.length).toBe(3);
     expect(stack.top).toBe(3);
@@ -48,9 +46,7 @@ describe("Stack", () => {
   });
 
   test("should maintain consistency after multiple operations", () => {
-    stack.push(1);
-    stack.push(2);
-    stack.push(3);
+    stack.push(1).push(2).push(3);
     expect(stack.length).toBe(3);
     expect(stack.top).toBe(3);
 

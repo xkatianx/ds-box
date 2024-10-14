@@ -1,5 +1,24 @@
-export class Stack<T> extends Array<T> {
+export class Stack<T> {
+  protected values: T[] = [];
+
+  get length() {
+    return this.values.length;
+  }
+
   get top() {
-    return this.at(-1);
+    return this.values.at(-1);
+  }
+
+  at(index: number) {
+    return this.values.at(index);
+  }
+
+  push(val: T) {
+    this.values.push(val);
+    return this;
+  }
+
+  pop() {
+    return this.values.pop();
   }
 }
